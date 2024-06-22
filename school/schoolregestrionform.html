@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Admission Registration Form</title>
+    <link rel="stylesheet" href="school.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Register for School Admission</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="motherTongue">Mother Tongue:</label>
+            <input type="text" id="motherTongue" name="motherTongue" required>
+
+            <label for="pastGrade">Past Grade:</label>
+            <input type="text" id="pastGrade" name="pastGrade" required>
+
+            <label for="fatherOccupation">Father's Occupation:</label>
+            <input type="text" id="fatherOccupation" name="fatherOccupation" required>
+
+            <label for="motherOccupation">Mother's Occupation:</label>
+            <input type="text" id="motherOccupation" name="motherOccupation" required>
+
+            <label for="feeReceipt">Fee Receipt Number:</label>
+            <input type="text" id="feeReceipt" name="feeReceipt" required>
+
+            <label for="admissionGrade">Grade of Admission:</label>
+            <input type="text" id="admissionGrade" name="admissionGrade" required>
+
+            <label for="aadharCard">Aadhar Card Number:</label>
+            <input type="text" id="aadharCard" name="aadharCard" required>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+            <label for="bloodGroup">Blood Group:</label>
+            <input type="text" id="bloodGroup" name="bloodGroup" required>
+
+            <label for="optionalTel">Optional Telephone:</label>
+            <input type="tel" id="optionalTel" name="optionalTel">
+
+            <label for="pastSchool">Past School Name:</label>
+            <input type="text" id="pastSchool" name="pastSchool" required>
+
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+
+            <label for="photo">Photo Upload:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        document.addEventListener("click", function() {
+            let submit = document.querySelector("button[type='submit']");
+            submit.addEventListener("click", function(event) {
+                event.preventDefault();
+                alert("You may receive a call later.");
+            });
+        });
+    </script>
+</body>
+</html>
